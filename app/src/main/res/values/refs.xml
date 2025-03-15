@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <drawable name="menu_background">menu</drawable>
+    <drawable name="block_solid">block</drawable>
+    <drawable name="block_redzone">block red</drawable>
+    <drawable name="block_gravizone">block grav</drawable>
+</resources>

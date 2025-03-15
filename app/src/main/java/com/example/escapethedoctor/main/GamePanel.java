@@ -1,0 +1,49 @@
+package com.example.escapethedoctor.main;
+
+import android.annotation.SuppressLint;
+import android.content.Context;
+import android.view.MotionEvent;
+import android.view.SurfaceHolder;
+import android.view.SurfaceView;
+
+import androidx.annotation.NonNull;
+
+import com.example.escapethedoctor.Game;
+
+public class GamePanel extends SurfaceView implements SurfaceHolder.Callback {
+    private final Game game;
+    @SuppressLint("StaticFieldLeak")
+    static private Context context;
+
+    public GamePanel(Context context) {
+        super(context);
+        GamePanel.context = context;
+        SurfaceHolder holder = getHolder();
+        holder.addCallback(this);
+        game = new Game(holder);
+    }
+
+    static public Context getGameContext(){
+        return context;
+    }
+
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
+        return game.touchEvent(event);
+    }
+
+    @Override
+    public void surfaceCreated(@NonNull SurfaceHolder holder) {
+        game.startGameLoop();
+    }
+
+    @Override
+    public void surfaceChanged(@NonNull SurfaceHolder holder, int format, int width, int height) {
+
+    }
+
+    @Override
+    public void surfaceDestroyed(@NonNull SurfaceHolder holder) {
+        game.stopGameLoop();
+    }
+}
