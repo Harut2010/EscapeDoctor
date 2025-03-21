@@ -21,9 +21,8 @@ public enum ButtonImages implements BitmapMethods {
     LVL2(R.drawable.button_lvl2, 32, 32, GAME_WIDTH / 13, GAME_WIDTH / 13),
     LVL3(R.drawable.button_lvl3, 32, 32, GAME_WIDTH / 13, GAME_WIDTH / 13),
     LVL4(R.drawable.button_lvl4, 32, 32, GAME_WIDTH / 13, GAME_WIDTH / 13),
-    LVL5(R.drawable.button_lvl5, 32, 32, GAME_WIDTH / 13, GAME_WIDTH / 13),
-    LVL6(R.drawable.button_lvl6, 32, 32, GAME_WIDTH / 13, GAME_WIDTH / 13),
-    LVL7(R.drawable.button_lvl7, 32, 32, GAME_WIDTH / 13, GAME_WIDTH / 13);
+    LVL5(R.drawable.button_lvl5, 32, 32, GAME_WIDTH / 13, GAME_WIDTH / 13);
+
 
     private int width, height;
     private final Bitmap normal;

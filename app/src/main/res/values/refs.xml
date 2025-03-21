@@ -4,4 +4,5 @@
     <drawable name="block_solid">block</drawable>
     <drawable name="block_redzone">block red</drawable>
     <drawable name="block_gravizone">block grav</drawable>
+    <drawable name="button_singleplayer">single player</drawable>
 </resources>
